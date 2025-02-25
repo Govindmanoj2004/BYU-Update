@@ -1,0 +1,63 @@
+.bottomNav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottomNav:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    transform: translateX(-50%) translateY(-5px);
+}
+
+
+
+.navItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    flex-grow: 0;
+    margin: 0 8px;
+}
+
+.navLabel {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navItem svg {
+    font-size: 28px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navItem:hover svg {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.navItem:hover .navLabel {
+    opacity: 1;
+    transform: translateY(0);
+    color: #007bff;
+}

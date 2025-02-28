@@ -26,6 +26,7 @@ const port = process.env.PORT || 3000;
 app.use(cors({ origin: process.env.CORS_ORIGIN || "*" }));
 app.use(express.json());
 
+//For live
 const config = {
   rtmp: {
     port: process.env.RTMP_PORT || 1935,
@@ -238,3 +239,5 @@ process.on("SIGINT", () => {
     process.exit(0);
   });
 });
+
+//User collections and actions
